@@ -86,8 +86,7 @@ rbind(p_value_1, p_value_2, p_value_3)
 # diagnostic plot
 xpdb <- xpose_data_nlmixr(fit)
 
-ggsave(filename = "vpc_plot_high_res.png", plot = vpc_plot, dpi = 400, 
-       width = 10, height = 8)
+
 
 print(dv_vs_pred(xpdb) + 
         ylab("The observed amount of unchanged sulfamethoxazole excreted in urine (mg)") +
@@ -106,6 +105,8 @@ vpc_plot<- vpcPlot(fit, n=1000, show=list(obs_dv=T),
                    xlab = "Median of the interval sampling time  (h)",
                    log_y=T)
 vpc_plot
+ggsave(filename = "vpc_plot_high_res.png", plot = vpc_plot, dpi = 400, 
+       width = 10, height = 8)
 
 #bootstrap
 bt <- bootstrapFit(fit, nboot=200)
