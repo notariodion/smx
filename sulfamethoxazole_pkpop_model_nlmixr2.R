@@ -1,5 +1,3 @@
-setwd('D:\\GitHub\\Farmakokinetika Sulfamethoxazole')
-
 # load library
 library(nlmixr2)
 library(rxode2)
